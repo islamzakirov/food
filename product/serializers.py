@@ -1,0 +1,18 @@
+from django.db.models import fields
+from rest_framework import serializers
+from .models import *
+
+class FoodSerializer(serializers.ModelSerializer):
+    class Meta():
+        model = Food
+        fields = '__all__'
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta():
+        model = Category
+        fields = '__all__'
+
+class AloqaSerializer(serializers.ModelSerializer):
+    class Meta():
+        model = Aloqa
+        fields = '__all__'
